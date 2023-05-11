@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>My data visualization</title>
-	<script src="js/plotly-2.20.0.min.js" charset="utf-8"></script>
-	
-</head>
-<body>
+  <head>
+    <title>My data visualization</title>
 
-	<div id='magnitude_histogram'></div>
-	   
-	<script src="js/script.js"></script>
-	<script type="text/javascript">master()</script>
-</body>
+    <script src="js/plotly-2.20.0.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <label for="magtype">Please select magtype:</label> <br />
+    <select class="p-2" name="magtype" id="magtype" onchange="master()">
+      <option value="all" selected>All</option>
+      <option value="ml">ML</option>
+      <option value="md">MD</option>
+      <option value="mb">MB</option>
+      <option value="mww">MWW</option>
+      <option value="mb_lg">MB LG</option>
+      <option value="mwr">MWR</option>
+    </select>
+
+    <button class="btn btn-primary" onclick="master()">Plot Data</button>
+
+    <div id="magnitude_histogram"></div>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      master();
+    </script>
+  </body>
 </html>
